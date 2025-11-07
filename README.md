@@ -1,9 +1,9 @@
-# 🍷 Wine Quality Prediction App
+#  Wine Quality Prediction App
 
 This project trains a `scikit-learn` model to predict wine quality based on its chemical properties.
 It provides an interactive web application, built with `Streamlit`, to get live predictions.
 
-## 🚧 Project Status: In Progress
+## Project Status: In Progress
 
 **Phase 1 (Complete):** Model training and local application development are finished.
 
