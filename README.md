@@ -46,21 +46,25 @@ You can run this application on your local machine.
 ```bash
 git clone [https://github.com/PRARTHANA-G/Self_Learning.git](https://github.com/PRARTHANA-G/Self_Learning.git)
 cd Self_Learning
+```
 ### 2. Create and Activate Virtual Environment
 # For Mac/Linux
+```bash
 python3 -m venv venv
 source venv/bin/activate
 
 # For Windows
 python -m venv venv
 .\venv\Scripts\activate
-
+```
 ### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ### 4.Run the Streamlit App
+```bash
 streamlit run app.py
-
+```
 
 ##  How to Run with Docker
 
@@ -70,5 +74,8 @@ This application is fully containerized.
 From the root of the project folder (where the `Dockerfile` is):
 ```bash
 docker build -t wine-app
+```
 ### 2. Run the Docker Container
+```bash
 docker run -p 8501:8501 wine-app
+```
