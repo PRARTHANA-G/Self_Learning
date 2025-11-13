@@ -2,7 +2,8 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+st.set_page_config(page_title="Wine Quality Predictor", layout="wide")
+st.title('🍷 Wine Quality Prediction App')
 # --- 1. Load Model ---
 # Load the model file
 @st.cache_data  # Cache the model load
@@ -16,8 +17,8 @@ def load_model():
 model = load_model()
 
 # --- 2. Set Up Page ---
-st.set_page_config(page_title="Wine Quality Predictor", layout="wide")
-st.title('🍷 Wine Quality Prediction App')
+
+
 
 # Check if model is loaded
 if model is None:
@@ -62,7 +63,7 @@ else:
         # Make prediction
         prediction = model.predict(input_data)
         predicted_quality = prediction[0]
-        
+        st.subheader(f'Raw Model Prediction: {predicted_quality}')
         st.subheader(f'Predicted Wine Quality: {predicted_quality}')
         if predicted_quality >= 7:
             st.success("This is a high-quality wine! 🌟")
